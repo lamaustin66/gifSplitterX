@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17366B5828A1CEE300FD4FD9 /* BrowseGifCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17366B5728A1CEE300FD4FD9 /* BrowseGifCollectionViewCell.swift */; };
+		17366B6228A1F1FA00FD4FD9 /* ObjcAssociatedWeakObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17366B5C28A1F1FA00FD4FD9 /* ObjcAssociatedWeakObject.swift */; };
+		17366B6328A1F1FA00FD4FD9 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17366B5D28A1F1FA00FD4FD9 /* UIImage+SwiftyGif.swift */; };
+		17366B6528A1F1FA00FD4FD9 /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17366B5F28A1F1FA00FD4FD9 /* UIImageView+SwiftyGif.swift */; };
+		17366B6628A1F1FA00FD4FD9 /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17366B6028A1F1FA00FD4FD9 /* SwiftyGifManager.swift */; };
+		1738DF3528A4878A00C4E91B /* GifFramesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738DF3428A4878A00C4E91B /* GifFramesViewController.swift */; };
+		1738DF3928A4BDBE00C4E91B /* GifFrameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738DF3828A4BDBE00C4E91B /* GifFrameCollectionViewCell.swift */; };
+		1742F7AE289CDC40002DC0CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1742F7AD289CDC40002DC0CF /* AppDelegate.swift */; };
+		1742F7B0289CDC40002DC0CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1742F7AF289CDC40002DC0CF /* SceneDelegate.swift */; };
+		1742F7B2289CDC40002DC0CF /* BrowseGifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1742F7B1289CDC40002DC0CF /* BrowseGifViewController.swift */; };
+		1742F7B5289CDC40002DC0CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1742F7B3289CDC40002DC0CF /* Main.storyboard */; };
+		1742F7B7289CDC41002DC0CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1742F7B6289CDC41002DC0CF /* Assets.xcassets */; };
+		1742F7BA289CDC41002DC0CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1742F7B8289CDC41002DC0CF /* LaunchScreen.storyboard */; };
+		17A9786C28B058DE003AF27F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A9786B28B058DE003AF27F /* SettingsViewController.swift */; };
+		17A9786E28B05AC0003AF27F /* SortKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A9786D28B05AC0003AF27F /* SortKey.swift */; };
+		17FF87A028B3081000D3E280 /* PlaybackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FF879F28B3081000D3E280 /* PlaybackSetting.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17366B5728A1CEE300FD4FD9 /* BrowseGifCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseGifCollectionViewCell.swift; sourceTree = "<group>"; };
+		17366B5C28A1F1FA00FD4FD9 /* ObjcAssociatedWeakObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjcAssociatedWeakObject.swift; sourceTree = "<group>"; };
+		17366B5D28A1F1FA00FD4FD9 /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
+		17366B5F28A1F1FA00FD4FD9 /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
+		17366B6028A1F1FA00FD4FD9 /* SwiftyGifManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyGifManager.swift; sourceTree = "<group>"; };
+		1738DF3428A4878A00C4E91B /* GifFramesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifFramesViewController.swift; sourceTree = "<group>"; };
+		1738DF3828A4BDBE00C4E91B /* GifFrameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifFrameCollectionViewCell.swift; sourceTree = "<group>"; };
+		1742F7AA289CDC40002DC0CF /* gifSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gifSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1742F7AD289CDC40002DC0CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1742F7AF289CDC40002DC0CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1742F7B1289CDC40002DC0CF /* BrowseGifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseGifViewController.swift; sourceTree = "<group>"; };
+		1742F7B4289CDC40002DC0CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1742F7B6289CDC41002DC0CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1742F7B9289CDC41002DC0CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1742F7BB289CDC41002DC0CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A9786B28B058DE003AF27F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		17A9786D28B05AC0003AF27F /* SortKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortKey.swift; sourceTree = "<group>"; };
+		17FF879F28B3081000D3E280 /* PlaybackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSetting.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1742F7A7289CDC40002DC0CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17366B6828A1F20200FD4FD9 /* SwiftyGif */ = {
+			isa = PBXGroup;
+			children = (
+				17366B5C28A1F1FA00FD4FD9 /* ObjcAssociatedWeakObject.swift */,
+				17366B6028A1F1FA00FD4FD9 /* SwiftyGifManager.swift */,
+				17366B5D28A1F1FA00FD4FD9 /* UIImage+SwiftyGif.swift */,
+				17366B5F28A1F1FA00FD4FD9 /* UIImageView+SwiftyGif.swift */,
+			);
+			path = SwiftyGif;
+			sourceTree = "<group>";
+		};
+		1738DF3728A4BBEF00C4E91B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1742F7B1289CDC40002DC0CF /* BrowseGifViewController.swift */,
+				1738DF3428A4878A00C4E91B /* GifFramesViewController.swift */,
+				17A9786B28B058DE003AF27F /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1742F7A1289CDC40002DC0CF = {
+			isa = PBXGroup;
+			children = (
+				1742F7AC289CDC40002DC0CF /* gifSplitter */,
+				1742F7AB289CDC40002DC0CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1742F7AB289CDC40002DC0CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1742F7AA289CDC40002DC0CF /* gifSplitter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1742F7AC289CDC40002DC0CF /* gifSplitter */ = {
+			isa = PBXGroup;
+			children = (
+				1742F7AD289CDC40002DC0CF /* AppDelegate.swift */,
+				1742F7AF289CDC40002DC0CF /* SceneDelegate.swift */,
+				17FF879E28B307E700D3E280 /* Models */,
+				17FF87A328B30DA600D3E280 /* Views */,
+				1738DF3728A4BBEF00C4E91B /* Controllers */,
+				17366B6828A1F20200FD4FD9 /* SwiftyGif */,
+				1742F7B3289CDC40002DC0CF /* Main.storyboard */,
+				1742F7B6289CDC41002DC0CF /* Assets.xcassets */,
+				1742F7B8289CDC41002DC0CF /* LaunchScreen.storyboard */,
+				1742F7BB289CDC41002DC0CF /* Info.plist */,
+			);
+			path = gifSplitter;
+			sourceTree = "<group>";
+		};
+		17FF879E28B307E700D3E280 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17A9786D28B05AC0003AF27F /* SortKey.swift */,
+				17FF879F28B3081000D3E280 /* PlaybackSetting.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17FF87A328B30DA600D3E280 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17366B5728A1CEE300FD4FD9 /* BrowseGifCollectionViewCell.swift */,
+				1738DF3828A4BDBE00C4E91B /* GifFrameCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1742F7A9289CDC40002DC0CF /* gifSplitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1742F7BE289CDC41002DC0CF /* Build configuration list for PBXNativeTarget "gifSplitter" */;
+			buildPhases = (
+				1742F7A6289CDC40002DC0CF /* Sources */,
+				1742F7A7289CDC40002DC0CF /* Frameworks */,
+				1742F7A8289CDC40002DC0CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gifSplitter;
+			productName = gifSplitter;
+			productReference = 1742F7AA289CDC40002DC0CF /* gifSplitter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1742F7A2289CDC40002DC0CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					1742F7A9289CDC40002DC0CF = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 1742F7A5289CDC40002DC0CF /* Build configuration list for PBXProject "gifSplitter" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1742F7A1289CDC40002DC0CF;
+			productRefGroup = 1742F7AB289CDC40002DC0CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1742F7A9289CDC40002DC0CF /* gifSplitter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1742F7A8289CDC40002DC0CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1742F7BA289CDC41002DC0CF /* LaunchScreen.storyboard in Resources */,
+				1742F7B7289CDC41002DC0CF /* Assets.xcassets in Resources */,
+				1742F7B5289CDC40002DC0CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1742F7A6289CDC40002DC0CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1742F7B2289CDC40002DC0CF /* BrowseGifViewController.swift in Sources */,
+				17366B6528A1F1FA00FD4FD9 /* UIImageView+SwiftyGif.swift in Sources */,
+				17A9786C28B058DE003AF27F /* SettingsViewController.swift in Sources */,
+				17366B6628A1F1FA00FD4FD9 /* SwiftyGifManager.swift in Sources */,
+				17FF87A028B3081000D3E280 /* PlaybackSetting.swift in Sources */,
+				1742F7AE289CDC40002DC0CF /* AppDelegate.swift in Sources */,
+				17A9786E28B05AC0003AF27F /* SortKey.swift in Sources */,
+				17366B6228A1F1FA00FD4FD9 /* ObjcAssociatedWeakObject.swift in Sources */,
+				1742F7B0289CDC40002DC0CF /* SceneDelegate.swift in Sources */,
+				1738DF3928A4BDBE00C4E91B /* GifFrameCollectionViewCell.swift in Sources */,
+				1738DF3528A4878A00C4E91B /* GifFramesViewController.swift in Sources */,
+				17366B6328A1F1FA00FD4FD9 /* UIImage+SwiftyGif.swift in Sources */,
+				17366B5828A1CEE300FD4FD9 /* BrowseGifCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1742F7B3289CDC40002DC0CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1742F7B4289CDC40002DC0CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1742F7B8289CDC41002DC0CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1742F7B9289CDC41002DC0CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1742F7BC289CDC41002DC0CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1742F7BD289CDC41002DC0CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1742F7BF289CDC41002DC0CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = VTDH754L4K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gifSplitter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gif Splitter X";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app interacts with individual frames of animated gifs from the photo library";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.austinlam.gifSplitterX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1742F7C0289CDC41002DC0CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = VTDH754L4K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gifSplitter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gif Splitter X";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app interacts with individual frames of animated gifs from the photo library";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.austinlam.gifSplitterX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1742F7A5289CDC40002DC0CF /* Build configuration list for PBXProject "gifSplitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1742F7BC289CDC41002DC0CF /* Debug */,
+				1742F7BD289CDC41002DC0CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1742F7BE289CDC41002DC0CF /* Build configuration list for PBXNativeTarget "gifSplitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1742F7BF289CDC41002DC0CF /* Debug */,
+				1742F7C0289CDC41002DC0CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1742F7A2289CDC40002DC0CF /* Project object */;
+}
