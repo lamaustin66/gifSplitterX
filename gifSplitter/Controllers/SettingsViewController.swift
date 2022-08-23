@@ -9,7 +9,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
-    weak var delegate: BrowseGifViewController?
+    weak var delegate: SettingsDelegate?
     var playbackSetting: PlaybackSetting!
 
     override func viewDidLoad() {
@@ -92,6 +92,10 @@ extension SettingsViewController: UITableViewDataSource {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = .white
     }
+}
+
+protocol SettingsDelegate: AnyObject {
+    func updateSetting(with: PlaybackSetting)
 }
 
 extension SettingsViewController: UITableViewDelegate {

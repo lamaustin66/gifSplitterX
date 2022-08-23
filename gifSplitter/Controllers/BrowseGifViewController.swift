@@ -86,13 +86,6 @@ class BrowseGifViewController: UIViewController {
         // print("Done enumerating objects, gifThumbnails array has count \(gifThumbnails.count)")
         noGifsIndicatorLabel.isHidden = gifThumbnails.count > 0
     }
-
-    func updateSetting(with playbackSetting: PlaybackSetting) {
-        self.playbackSetting = playbackSetting
-        
-        refetchGifs()
-        collectionView.reloadSections(IndexSet(integer: 0))
-    }
     
     @objc func handleRefreshControl() {
         refetchGifs()
@@ -182,5 +175,14 @@ extension BrowseGifViewController: UIPopoverPresentationControllerDelegate {
               let settingsVC = settingsNC.viewControllers.first as? SettingsViewController else { return }
         
         updateSetting(with: settingsVC.playbackSetting)
+    }
+}
+
+extension BrowseGifViewController: SettingsDelegate {
+    func updateSetting(with playbackSetting: PlaybackSetting) {
+        self.playbackSetting = playbackSetting
+        
+        refetchGifs()
+        collectionView.reloadSections(IndexSet(integer: 0))
     }
 }
