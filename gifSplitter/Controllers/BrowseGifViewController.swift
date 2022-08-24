@@ -11,8 +11,9 @@ class BrowseGifViewController: UIViewController {
     @IBOutlet weak var settingsBarButton: UIBarButtonItem!
     @IBOutlet weak var noGifsIndicatorLabel: UILabel!
     
-    var playbackSetting = PlaybackSetting(sortKey: .creationDate, isAscending: false, animationPreviewIntegrityValue: .lowForTooManyGifs)
-    var gifThumbnails: [Data] = []
+    weak var coordinator: MainCoordinator?
+    var gifViewModel = GifViewModel()
+    var playbackSetting = PlaybackSetting()
     
     override func viewDidLoad() {
         setupCollectionView()
@@ -64,27 +65,8 @@ class BrowseGifViewController: UIViewController {
     }
     
     func refetchGifs() {
-        gifThumbnails = []
-        guard let gifCollection = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumAnimated, options: nil).firstObject else { return }
-        
-        let fetchOptions = PHFetchOptions()
-        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: playbackSetting.isAscending)]
-        let fetchResultOfAssets = PHAsset.fetchAssets(in: gifCollection, options: fetchOptions)
-        
-        let options = PHImageRequestOptions()
-        options.isSynchronous = true
-        fetchResultOfAssets.enumerateObjects { asset, index, stop in
-            PHImageManager.default().requestImageDataAndOrientation(for: asset, options: options) { imageData, dataUTI, orientation, info in
-                guard let imageData = imageData ,dataUTI == UTType.gif.identifier
-                else {
-                    // print("No gif data")
-                    return
-                }
-                self.gifThumbnails.append(imageData)
-            }
-        }
-        // print("Done enumerating objects, gifThumbnails array has count \(gifThumbnails.count)")
-        noGifsIndicatorLabel.isHidden = gifThumbnails.count > 0
+        gifViewModel.fetchGifs(isAscending: playbackSetting.isAscending)
+        noGifsIndicatorLabel.isHidden = gifViewModel.gifThumbnails.count > 0
     }
     
     @objc func handleRefreshControl() {
@@ -118,18 +100,12 @@ class BrowseGifViewController: UIViewController {
 
 extension BrowseGifViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gifThumbnails.count
+        return gifViewModel.gifThumbnails.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gifCell", for: indexPath) as! BrowseGifCollectionViewCell
-        
-        do {
-            let gifImage = try UIImage(gifData: gifThumbnails[indexPath.item], levelOfIntegrity: .default)
-            cell.imageView.setGifImage(gifImage)
-        } catch {
-            print("Could not load gif from data to be placed in collection view cell's image view")
-        }
+        cell.imageView.setGifImage(gifViewModel.gifThumbnails[indexPath.item])
         
         return cell
     }
@@ -137,10 +113,8 @@ extension BrowseGifViewController: UICollectionViewDataSource {
 
 extension BrowseGifViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "gifFramesVC") as! GifFramesViewController
-        vc.gifData = gifThumbnails[indexPath.item]
-        self.navigationController?.pushViewController(vc, animated: true)
+        let gifData = gifViewModel.gifData[indexPath.item]
+        coordinator?.selectedGif(with: gifData)
     }
 }
 
@@ -173,7 +147,7 @@ extension BrowseGifViewController: UIPopoverPresentationControllerDelegate {
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
         guard let settingsNC = presentationController.presentedViewController as? UINavigationController,
               let settingsVC = settingsNC.viewControllers.first as? SettingsViewController else { return }
-        
+
         updateSetting(with: settingsVC.playbackSetting)
     }
 }

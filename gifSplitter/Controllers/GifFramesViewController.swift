@@ -11,8 +11,8 @@ class GifFramesViewController: UIViewController {
     @IBOutlet weak var clearView: UIView!
     @IBOutlet weak var savedIndicator: UILabel!
     
-    var gifData: Data?
-    var gifFrames = [UIImage]()
+    weak var coordinator: MainCoordinator?
+    var gifFramesViewModel: GifFramesViewModel!
     var prevItem = 0
     
     // Rotating from portrait to landscape changes offset (Apple's bug)
@@ -42,20 +42,7 @@ class GifFramesViewController: UIViewController {
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        guard let gifData = gifData, let imageSource = CGImageSourceCreateWithData(gifData as CFData, nil) else {
-            print("Cannot create image source with data!")
-            return
-        }
-        
-        let framesCount = CGImageSourceGetCount(imageSource)
-        for index in 0 ..< framesCount {
-            if let cgImageRef = CGImageSourceCreateImageAtIndex(imageSource, index, nil) {
-                let uiImageRef = UIImage(cgImage: cgImageRef)
-                gifFrames.append(uiImageRef)
-            }
-        }
-        gifImageView.image = gifFrames[0]
+        gifImageView.image = gifFramesViewModel.gifFrames.first
     }
     
     func setupScrollView() {
@@ -93,12 +80,12 @@ class GifFramesViewController: UIViewController {
 
 extension GifFramesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gifFrames.count
+        return gifFramesViewModel.gifFrames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gifFrameCell", for: indexPath) as! GifFrameCollectionViewCell
-        cell.imageView.image = gifFrames[indexPath.item]
+        cell.imageView.image = gifFramesViewModel.gifFrames[indexPath.item]
         return cell
     }
 }
@@ -132,11 +119,9 @@ extension GifFramesViewController: UIScrollViewDelegate {
               item != prevItem else {
             return
         }
-        
         prevItem = item
         UISelectionFeedbackGenerator().selectionChanged()
-        
-        gifImageView.image = gifFrames[item]
+        gifImageView.image = gifFramesViewModel.gifFrames[item]
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
