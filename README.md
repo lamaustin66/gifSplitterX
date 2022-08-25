@@ -4,6 +4,11 @@ Gif Splitter X is a free and open sourced tool to extract individual frames from
 
 Distinguishing features include animated previews, intuitive frame scrubber, and original quality frame saves
 
+## Architecture
+- Model View ViewModel (MVVM)
+- Coordinator
+- Delegate
+
 ## Technologies
 
 - PHAssets
